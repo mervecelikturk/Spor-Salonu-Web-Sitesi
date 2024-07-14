@@ -1,0 +1,49 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="adminAnaSayfasi.master.cs" Inherits="Merve_Çeliktürk_bütünleme.forms.adminAnaSayfasi" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title><%: Page.Title %> - Admin Paneli</title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+        /* Admin sayfası stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            background-color: #00274d; /* Lacivert */
+            overflow: hidden;
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            background-color: #001f3f; /* Daha koyu lacivert */
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="navbar">
+            <a href="adminAnaSayfasi.aspx">Ana Sayfa</a>
+            <a href="adminKayitEkrani.aspx">Kayıt</a>
+            <a href="adminRandevuEkrani.aspx">Randevular</a>
+            <a href="cikisYap.aspx">Çıkış Yap</a> <!-- Çıkış yap bağlantısı -->
+        </div>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

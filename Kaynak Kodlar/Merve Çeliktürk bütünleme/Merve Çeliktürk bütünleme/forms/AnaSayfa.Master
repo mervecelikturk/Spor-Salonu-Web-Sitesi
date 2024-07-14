@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AnaSayfa.master.cs" Inherits="Merve_Çeliktürk_bütünleme.forms.AnaSayfa" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <title>proje    </title>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+        <!-- Bu alan, içerik sayfalarının ekleyebileceği ek head içeriği içindir. -->
+    </asp:ContentPlaceHolder>
+    <style>
+        /* Genel stil ayarları */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        /* Navbar stil ayarları */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #00274d; /* Lacivert renk */
+            padding: 10px 20px;
+        }
+        .navbar a {
+            color: white; /* Beyaz renk */
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 16px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .navbar .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .navbar .left, .navbar .right {
+            display: flex;
+            align-items: center;
+        }
+        .navbar .right a {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <form runat="server">
+        <!-- Navbar bölümü -->
+        <div class="navbar">
+            <div class="left">
+                <div class="logo">Lion Rona</div>
+                <a href="anaSayfa.aspx">Ana Sayfa</a>
+                <a href="subelerimiz.aspx">Şube</a>
+                <a href="hakkimizda.aspx">Hakkımızda</a>
+                <a href="iletisim.aspx">İletişim</a>
+            </div>
+            <div class="right">
+                <a href="girisYap.aspx">Giriş Yap</a>
+                <a href="kayitOl.aspx">Kayıt Ol</a>
+                <a href="adminGirisi.aspx">Admin Girişi</a>
+            </div>
+        </div>
+        <!-- İçerik sayfalarının ekleyeceği içerik için yer tutucu -->
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+</body>
+</html>
